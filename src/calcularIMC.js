@@ -13,8 +13,23 @@
 // **Fórmula IMC**: peso / (altura * altura)
 
 function calcularIMC(peso, altura) {
-  // TODO: implementar função
+  const imc = peso / (altura * altura);
+  console.log(imc)
+
+  if (imc <= 18.5) {
+    return "Abaixo do peso!"
+  } else if (imc > 18.5 && imc <= 24.9) {
+    return "Peso normal!"
+  } else if (imc > 25 && imc <= 29.9) {
+    return "Sobrepeso!"
+  } else if (imc > 30) {
+    return "Obesidade!"
+  } else {
+    return "Erro!"
+  }
 }
+
+console.log(calcularIMC(40, 1.60));
 
 // NÃO REMOVA O CÓDIGO ABAIXO
 module.exports = { calcularIMC };
